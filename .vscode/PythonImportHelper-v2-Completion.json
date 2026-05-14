@@ -88,94 +88,6 @@
         "documentation": {}
     },
     {
-        "label": "QApplication",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QMainWindow",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QWidget",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QVBoxLayout",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QLineEdit",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QScrollArea",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QGridLayout",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QPushButton",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QFrame",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QLabel",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QFont",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
-        "isExtraImport": true,
-        "detail": "PySide6.QtGui",
-        "documentation": {}
-    },
-    {
         "label": "QFont",
         "importPath": "PySide6.QtGui",
         "description": "PySide6.QtGui",
@@ -232,22 +144,6 @@
         "documentation": {}
     },
     {
-        "label": "QSqlDatabase",
-        "importPath": "PySide6.QtSql",
-        "description": "PySide6.QtSql",
-        "isExtraImport": true,
-        "detail": "PySide6.QtSql",
-        "documentation": {}
-    },
-    {
-        "label": "QSqlQuery",
-        "importPath": "PySide6.QtSql",
-        "description": "PySide6.QtSql",
-        "isExtraImport": true,
-        "detail": "PySide6.QtSql",
-        "documentation": {}
-    },
-    {
         "label": "dataclass",
         "importPath": "dataclasses",
         "description": "dataclasses",
@@ -287,23 +183,6 @@
         "description": "src.widgets.main_window",
         "isExtraImport": true,
         "detail": "src.widgets.main_window",
-        "documentation": {}
-    },
-    {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
-        "label": "Qt",
-        "importPath": "PySide6.QtCore",
-        "description": "PySide6.QtCore",
-        "isExtraImport": true,
-        "detail": "PySide6.QtCore",
         "documentation": {}
     },
     {
@@ -358,24 +237,6 @@
         "description": "main",
         "peekOfCode": "def main():\n    app = QApplication(sys.argv)\n    if not init_db(\"resources/glyphs.db\"):\n        sys.exit(1)\n    window = NerdFontViewer()\n    window.show()\n    sys.exit(app.exec())\nif __name__ == \"__main__\":\n    main()",
         "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "CollapsibleSection",
-        "kind": 6,
-        "importPath": "main_dbg",
-        "description": "main_dbg",
-        "peekOfCode": "class CollapsibleSection(QWidget):\n    def __init__(self, title, parent=None):\n        super().__init__(parent)\n        self.layout = QVBoxLayout(self)\n        self.btn = QPushButton(f\"▼ {title}\")\n        self.btn.setCheckable(True)\n        self.btn.setChecked(True)\n        self.btn.clicked.connect(self.toggle)\n        self.content = QFrame()\n        self.grid = QGridLayout(self.content)",
-        "detail": "main_dbg",
-        "documentation": {}
-    },
-    {
-        "label": "NerdFontViewer",
-        "kind": 6,
-        "importPath": "main_dbg",
-        "description": "main_dbg",
-        "peekOfCode": "class NerdFontViewer(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Nerd Font Explorer\")\n        self.resize(1000, 700)\n        # 1. Check pathing\n        db_path = os.path.join(\"resources\", \"glyphs.db\")\n        print(f\"Checking for DB at: {os.path.abspath(db_path)}\")\n        # 2. Initialize DB\n        self.db = QSqlDatabase.addDatabase(\"QSQLITE\")",
-        "detail": "main_dbg",
         "documentation": {}
     }
 ]
