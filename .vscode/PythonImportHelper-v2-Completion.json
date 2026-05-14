@@ -40,6 +40,38 @@
         "documentation": {}
     },
     {
+        "label": "QFrame",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -56,23 +88,31 @@
         "documentation": {}
     },
     {
+        "label": "QHBoxLayout",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QScrollArea",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QPushButton",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QFrame",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
-        "label": "QGridLayout",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -104,11 +144,59 @@
         "documentation": {}
     },
     {
-        "label": "Glyph",
-        "importPath": "src.models",
-        "description": "src.models",
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
         "isExtraImport": true,
-        "detail": "src.models",
+        "detail": "PySide6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PySide6.QtGui",
+        "description": "PySide6.QtGui",
+        "isExtraImport": true,
+        "detail": "PySide6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "get_families",
+        "importPath": "src.database",
+        "description": "src.database",
+        "isExtraImport": true,
+        "detail": "src.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_glyphs_by_family",
+        "importPath": "src.database",
+        "description": "src.database",
+        "isExtraImport": true,
+        "detail": "src.database",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "src.database",
+        "description": "src.database",
+        "isExtraImport": true,
+        "detail": "src.database",
+        "documentation": {}
+    },
+    {
+        "label": "QSqlDatabase",
+        "importPath": "PySide6.QtSql",
+        "description": "PySide6.QtSql",
+        "isExtraImport": true,
+        "detail": "PySide6.QtSql",
         "documentation": {}
     },
     {
@@ -117,6 +205,14 @@
         "description": "PySide6.QtSql",
         "isExtraImport": true,
         "detail": "PySide6.QtSql",
+        "documentation": {}
+    },
+    {
+        "label": "Glyph",
+        "importPath": "src.models",
+        "description": "src.models",
+        "isExtraImport": true,
+        "detail": "src.models",
         "documentation": {}
     },
     {
@@ -154,14 +250,6 @@
         "documentation": {}
     },
     {
-        "label": "init_db",
-        "importPath": "src.database",
-        "description": "src.database",
-        "isExtraImport": true,
-        "detail": "src.database",
-        "documentation": {}
-    },
-    {
         "label": "NerdFontViewer",
         "importPath": "src.widgets.main_window",
         "description": "src.widgets.main_window",
@@ -179,12 +267,39 @@
         "documentation": {}
     },
     {
-        "label": "CollapsibleSection",
+        "label": "InfoPanel",
+        "kind": 6,
+        "importPath": "src.widgets.info_panel",
+        "description": "src.widgets.info_panel",
+        "peekOfCode": "class InfoPanel(QFrame):\n    def __init__(self):\n        super().__init__()\n        self.setFixedWidth(250)\n        self.setStyleSheet(\"background-color: #f8f9fa; border-left: 1px solid #ccc;\")\n        layout = QVBoxLayout(self)\n        self.title = QLabel(\"Icon Details\")\n        self.title.setStyleSheet(\"font-weight: bold; font-size: 16px;\")\n        self.glyph_display = QLabel(\"\")\n        self.glyph_display.setAlignment(Qt.AlignCenter)",
+        "detail": "src.widgets.info_panel",
+        "documentation": {}
+    },
+    {
+        "label": "NerdFontViewer",
         "kind": 6,
         "importPath": "src.widgets.main_window",
         "description": "src.widgets.main_window",
-        "peekOfCode": "class CollapsibleSection(QWidget):\n    def __init__(self, title, parent=None):\n        super().__init__(parent)\n        self.layout = QVBoxLayout(self)\n        self.layout.setContentsMargins(0, 5, 0, 5)\n        # Section Toggle Button\n        self.btn = QPushButton(f\"▼ {title}\")\n        self.btn.setCheckable(True)\n        self.btn.setChecked(True)\n        self.btn.setStyleSheet(\"\"\"",
+        "peekOfCode": "class NerdFontViewer(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Nerd Font SQLite Explorer\")\n        self.resize(1280, 800)\n        self.all_buttons = []\n        central_widget = QWidget()\n        self.setCentralWidget(central_widget)\n        # MAIN LAYOUT (Horizontal to fit the InfoPanel on the right)\n        self.main_h_layout = QHBoxLayout(central_widget)",
         "detail": "src.widgets.main_window",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "kind": 2,
+        "importPath": "src.database",
+        "description": "src.database",
+        "peekOfCode": "def init_db(db_path):\n    \"\"\"Initializes the connection to the SQLite database.\"\"\"\n    db = QSqlDatabase.addDatabase(\"QSQLITE\")\n    db.setDatabaseName(db_path)\n    if not db.open():\n        print(f\"Database Error: {db.lastError().text()}\")\n        return False\n    return True\ndef get_families():\n    \"\"\"Returns a list of unique font families from the DB.\"\"\"",
+        "detail": "src.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_families",
+        "kind": 2,
+        "importPath": "src.database",
+        "description": "src.database",
+        "peekOfCode": "def get_families():\n    \"\"\"Returns a list of unique font families from the DB.\"\"\"\n    query = QSqlQuery(\"SELECT DISTINCT family FROM glyphs\")\n    families = []\n    while query.next():\n        families.append(query.value(0))\n    return families\ndef get_glyphs_by_family(family_name):\n    \"\"\"Returns a list of Glyph objects for a specific family.\"\"\"\n    query = QSqlQuery()",
+        "detail": "src.database",
         "documentation": {}
     },
     {
@@ -192,7 +307,7 @@
         "kind": 2,
         "importPath": "src.database",
         "description": "src.database",
-        "peekOfCode": "def get_glyphs_by_family(family):\n    query = QSqlQuery(f\"SELECT char, name, hex, family FROM glyphs WHERE family = '{family}'\")\n    glyphs = []\n    while query.next():\n        # Using the model to wrap the data\n        glyphs.append(Glyph(\n            char=query.value(0),\n            name=query.value(1),\n            hex_code=query.value(2),\n            family=query.value(3)",
+        "peekOfCode": "def get_glyphs_by_family(family_name):\n    \"\"\"Returns a list of Glyph objects for a specific family.\"\"\"\n    query = QSqlQuery()\n    # Use a prepared statement or f-string for the query\n    query.prepare(\"SELECT char, name, hex, family FROM glyphs WHERE family = :family\")\n    query.bindValue(\":family\", family_name)\n    query.exec_()\n    glyphs = []\n    while query.next():\n        glyphs.append(Glyph(",
         "detail": "src.database",
         "documentation": {}
     },
