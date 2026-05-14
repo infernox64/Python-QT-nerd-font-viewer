@@ -64,6 +64,22 @@
         "documentation": {}
     },
     {
+        "label": "QPushButton",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
         "label": "QMainWindow",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -271,7 +287,7 @@
         "kind": 6,
         "importPath": "src.widgets.info_panel",
         "description": "src.widgets.info_panel",
-        "peekOfCode": "class InfoPanel(QFrame):\n    def __init__(self):\n        super().__init__()\n        self.setFixedWidth(250)\n        self.setStyleSheet(\"background-color: #f8f9fa; border-left: 1px solid #ccc;\")\n        layout = QVBoxLayout(self)\n        self.title = QLabel(\"Icon Details\")\n        self.title.setStyleSheet(\"font-weight: bold; font-size: 16px;\")\n        self.glyph_display = QLabel(\"\")\n        self.glyph_display.setAlignment(Qt.AlignCenter)",
+        "peekOfCode": "class InfoPanel(QFrame):\n    def __init__(self):\n        super().__init__()\n        self.setFixedWidth(280)\n        self.setObjectName(\"InfoPanel\")\n        self.setStyleSheet(\"\"\"\n            QFrame#InfoPanel { \n                background-color: #252526; \n                border-left: 1px solid #3e3e42;\n            }",
         "detail": "src.widgets.info_panel",
         "documentation": {}
     },
@@ -334,7 +350,16 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main():\n    app = QApplication(sys.argv)\n    if not init_db(\"resources/glyphs.db\"):\n        sys.exit(1)\n    window = NerdFontViewer()\n    window.show()\n    sys.exit(app.exec())\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def main():\n    app = QApplication(sys.argv)\n    app.setStyleSheet(DARK_THEME) # Apply theme globally\n    if not init_db(\"resources/glyphs.db\"):\n        sys.exit(1)\n    window = NerdFontViewer()\n    window.show()\n    sys.exit(app.exec())\nif __name__ == \"__main__\":\n    main()",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "DARK_THEME",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "DARK_THEME = \"\"\"\nQMainWindow, QDialog {\n    background-color: #1e1e1e;\n}\nQWidget {\n    background-color: #1e1e1e;\n    color: #d4d4d4;\n    font-family: 'Segoe UI', sans-serif;\n}\n/* This fixes the white backgrounds in the gallery area */",
         "detail": "main",
         "documentation": {}
     }

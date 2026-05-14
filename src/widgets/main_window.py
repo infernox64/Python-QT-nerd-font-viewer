@@ -25,11 +25,21 @@ class NerdFontViewer(QMainWindow):
         self.search_bar = QLineEdit()
         self.search_bar.setPlaceholderText("Search icons...")
         self.search_bar.textChanged.connect(self.filter_glyphs)
+        self.search_bar.setStyleSheet("""
+    QLineEdit {
+        padding: 8px 12px;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        background: #fff;
+    }
+""")
         self.left_layout.addWidget(self.search_bar)
 
         self.scroll = QScrollArea()
         self.scroll.setWidgetResizable(True)
         self.scroll_content = QWidget()
+        self.scroll_content.setObjectName("scroll_content")
         self.sections_layout = QVBoxLayout(self.scroll_content)
         self.scroll.setWidget(self.scroll_content)
         self.left_layout.addWidget(self.scroll)
