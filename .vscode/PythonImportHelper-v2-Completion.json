@@ -40,14 +40,6 @@
         "documentation": {}
     },
     {
-        "label": "QMainWindow",
-        "importPath": "PySide6.QtWidgets",
-        "description": "PySide6.QtWidgets",
-        "isExtraImport": true,
-        "detail": "PySide6.QtWidgets",
-        "documentation": {}
-    },
-    {
         "label": "QWidget",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
@@ -64,7 +56,7 @@
         "documentation": {}
     },
     {
-        "label": "QLineEdit",
+        "label": "QPushButton",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -72,7 +64,15 @@
         "documentation": {}
     },
     {
-        "label": "QScrollArea",
+        "label": "QFrame",
+        "importPath": "PySide6.QtWidgets",
+        "description": "PySide6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PySide6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QGridLayout",
         "importPath": "PySide6.QtWidgets",
         "description": "PySide6.QtWidgets",
         "isExtraImport": true,
@@ -88,43 +88,19 @@
         "documentation": {}
     },
     {
-        "label": "QFont",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
         "isExtraImport": true,
-        "detail": "PySide6.QtGui",
+        "detail": "PySide6.QtCore",
         "documentation": {}
     },
     {
-        "label": "QFont",
-        "importPath": "PySide6.QtGui",
-        "description": "PySide6.QtGui",
+        "label": "Qt",
+        "importPath": "PySide6.QtCore",
+        "description": "PySide6.QtCore",
         "isExtraImport": true,
-        "detail": "PySide6.QtGui",
-        "documentation": {}
-    },
-    {
-        "label": "get_families",
-        "importPath": "src.database",
-        "description": "src.database",
-        "isExtraImport": true,
-        "detail": "src.database",
-        "documentation": {}
-    },
-    {
-        "label": "get_glyphs_by_family",
-        "importPath": "src.database",
-        "description": "src.database",
-        "isExtraImport": true,
-        "detail": "src.database",
-        "documentation": {}
-    },
-    {
-        "label": "init_db",
-        "importPath": "src.database",
-        "description": "src.database",
-        "isExtraImport": true,
-        "detail": "src.database",
+        "detail": "PySide6.QtCore",
         "documentation": {}
     },
     {
@@ -178,6 +154,14 @@
         "documentation": {}
     },
     {
+        "label": "init_db",
+        "importPath": "src.database",
+        "description": "src.database",
+        "isExtraImport": true,
+        "detail": "src.database",
+        "documentation": {}
+    },
+    {
         "label": "NerdFontViewer",
         "importPath": "src.widgets.main_window",
         "description": "src.widgets.main_window",
@@ -190,16 +174,16 @@
         "kind": 6,
         "importPath": "src.widgets.gallery_view",
         "description": "src.widgets.gallery_view",
-        "peekOfCode": "class CollapsibleSection(QWidget):\n    def __init__(self, title, parent=None):\n        super().__init__(parent)\n        self.layout = QVBoxLayout(self)\n        self.btn = QPushButton(f\"▼ {title}\")\n        self.btn.setCheckable(True)\n        self.btn.setChecked(True)\n        self.btn.setStyleSheet(\"text-align: left; font-weight: bold; background: #e0e0e0;\")\n        self.btn.clicked.connect(self.toggle)\n        self.content = QFrame()",
+        "peekOfCode": "class CollapsibleSection(QWidget):\n    def __init__(self, title, parent=None):\n        super().__init__(parent)\n        self.layout = QVBoxLayout(self)\n        self.layout.setContentsMargins(0, 5, 0, 5)\n        # Section Toggle Button\n        self.btn = QPushButton(f\"▼ {title}\")\n        self.btn.setCheckable(True)\n        self.btn.setChecked(True)\n        self.btn.setStyleSheet(\"\"\"",
         "detail": "src.widgets.gallery_view",
         "documentation": {}
     },
     {
-        "label": "NerdFontViewer",
+        "label": "CollapsibleSection",
         "kind": 6,
         "importPath": "src.widgets.main_window",
         "description": "src.widgets.main_window",
-        "peekOfCode": "class NerdFontViewer(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Nerd Font SQLite Explorer\")\n        self.resize(1000, 700)\n        self.all_buttons = []\n        central = QWidget()\n        self.setCentralWidget(central)\n        layout = QVBoxLayout(central)\n        self.search_bar = QLineEdit()",
+        "peekOfCode": "class CollapsibleSection(QWidget):\n    def __init__(self, title, parent=None):\n        super().__init__(parent)\n        self.layout = QVBoxLayout(self)\n        self.layout.setContentsMargins(0, 5, 0, 5)\n        # Section Toggle Button\n        self.btn = QPushButton(f\"▼ {title}\")\n        self.btn.setCheckable(True)\n        self.btn.setChecked(True)\n        self.btn.setStyleSheet(\"\"\"",
         "detail": "src.widgets.main_window",
         "documentation": {}
     },
